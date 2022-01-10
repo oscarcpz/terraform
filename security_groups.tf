@@ -8,8 +8,8 @@ resource "aws_security_group" "sg_opc" {
     from_port = 22
     protocol = "tcp"
     to_port = 22
-    cidr_blocks = ["<ip_publica>/32"] # ip publica de la red desde donde se quiera conectar por SSH
-    description = "Indizen IDZ1"
+    cidr_blocks = [var.ip_publica_oficina] # Direccion desde la que queremos conectar a la maquina
+    description = "Direccion desde la que queremos conectar a la maquina"
   }
 
   # Reglas de salida

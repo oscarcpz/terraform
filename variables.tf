@@ -123,6 +123,12 @@ variable "backup_window" {
   default = "04:00-04:30"
 }
 
+# IPs para los grupos de seguridad
+variable "ip_publica_oficina" {
+  type = "string"
+  default = "111.222.333.444/32"
+}
+
 # TAGS
 variable "tag_project" {
   type = "string"
